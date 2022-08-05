@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec babel-node index.js",
     "clean": "rm -rf build && mkdir build",
-    "start": "./build/index.js esm ",
+    "start": "node ./build/index.js esm --experimental-specifier-resolution=node",
     "build-babel": "babel -d ./build index.js -s",
     "build": "npm run clean && npm run build-babel",
     "heroku-postbuild": "npm run build"
