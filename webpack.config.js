@@ -4,8 +4,7 @@ const nodeExternals = require('webpack-node-externals')
 module.exports = {
   entry: './index.js',
   output: {
-    path: path.join(__dirname, '/dist'),
-    filename: 'index_bundle.js',
+    filename: 'bundle.js',
   },
   target: 'node',
   externalsPresets: { node: true }, // in order to ignore built-in modules like path, fs, etc.

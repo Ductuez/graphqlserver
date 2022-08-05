@@ -14,7 +14,7 @@
     "start": "node ./dist/index_bundle.js ",
     "build-babel": "babel -d ./build index.js -s",
     "build": "  webpack --mode=production --watch ",
-    "heroku-postbuild": "npm run build  "
+    "heroku-postbuild": "npm run build"
   },
   "babel": {
     "presets": [
