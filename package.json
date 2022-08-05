@@ -13,7 +13,7 @@
     "clean": "rm -rf build && mkdir build",
     "start": "node ./dist/index_bundle.js ",
     "build-babel": "babel -d ./build index.js -s",
-    "build": "  webpack --mode=development --watch ",
+    "build": "  webpack --mode=production --watch ",
     "heroku-postbuild": "npm run build npm "
   },
   "babel": {
