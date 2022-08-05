@@ -14,7 +14,6 @@
     "start": "nodemon --exec babel-node index.js",
     "build-babel": "babel -d ./build index.js -s",
     "build": "npm run clean && npm run build-babel"
-
   },
   "babel": {
     "presets": [
@@ -30,7 +29,7 @@
     "apollo-server-express": "^3.10.0",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
-    "graphql": "^14.2.1",
+    "graphql": "^15.3.0",
     "graphql-upload": "^12.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.14",
