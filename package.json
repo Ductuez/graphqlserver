@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec babel-node index.js",
     "clean": "rm -rf build && mkdir build",
-    "start": " ./dist/index_bundle.js -s",
+    "start": "node ./dist/index_bundle.js ",
     "build-babel": "babel -d ./build index.js -s",
     "build": "  webpack --mode=development --watch ",
     "heroku-postbuild": "npm run build"
