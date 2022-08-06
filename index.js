@@ -26,6 +26,7 @@ async function startApolloServer(typeDefs, resolvers) {
     resolvers,
     csrfPrevention: true,
     cache: 'bounded',
+    introspection: process.env.APPLICATION_ENV !== 'production',
     context: ({ req }) => {
       return {
         ...req,
