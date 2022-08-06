@@ -5,7 +5,6 @@ import resolvers from './graphql/resolvers'
 import Auth from './services/auth.service'
 import express from 'express'
 import { port, urlMONGODB } from './configs'
-
 const {
   graphqlUploadExpress, // A Koa implementation is also exported.
 } = require('graphql-upload')
@@ -24,8 +23,8 @@ async function startApolloServer(typeDefs, resolvers) {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    csrfPrevention: true,
     cache: 'bounded',
+    csrfPrevention: true,
     context: ({ req }) => {
       return {
         ...req,
