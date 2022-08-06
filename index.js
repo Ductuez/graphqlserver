@@ -52,6 +52,10 @@ async function startApolloServer(typeDefs, resolvers) {
 
 // This middleware should be added before calling `applyMiddleware`.
 
-mongoose.connect(urlMONGODB, { useNewUrlParser: true }).then(() => {
-  startApolloServer(typeDefs, resolvers)
-})
+mongoose
+  .connect('mongodb+srv://tuehd:0917977835@cluster0.r5mdp.mongodb.net/?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+  })
+  .then(() => {
+    startApolloServer(typeDefs, resolvers)
+  })
