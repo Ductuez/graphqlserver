@@ -12,7 +12,8 @@
     "dev": "nodemon --exec babel-node index.js",
     "clean": "rm -rf build && mkdir build",
     "start": "node ./dist/index_bundle.js ",
-    "build-babel": "babel -d ./build index.js -s"
+    "build-babel": "babel -d ./build index.js -s",
+    "build": "  webpack --mode=production --watch "
   },
   "babel": {
     "presets": [
