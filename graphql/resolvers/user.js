@@ -4,6 +4,7 @@ import Auth from '../../services/auth.service'
 export default {
   Mutation: {
     async createUser(_, { createUserInput: { username, password, email, role } }, context) {
+      console.log(username)
       try {
         const hashedPwd = await Auth.hashPassword(password)
         const newUser = new User({
